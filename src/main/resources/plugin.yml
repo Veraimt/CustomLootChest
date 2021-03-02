@@ -1,0 +1,5 @@
+  name: CustomLootChest
+  main: de.veraimt.customlootchest
+  version: ${project.version}
+  authors: [Veraimt]
+  api-version: 1.8
