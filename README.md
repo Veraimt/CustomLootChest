@@ -1,7 +1,7 @@
 # CustomLootChest
 Minecraft Plugin to easily generate Chests with custom Loot
 
-This is my first plugin and my first use of GitHub, so don't be surprised if the code is weird. :D
+This is my first plugin and my first use of GitHub, so don't expect top level code. :D
 
 I want to learn from this, so it would be nice if you leave some feedback!
 
