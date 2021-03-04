@@ -14,8 +14,8 @@ To opt out, edit the `/plugins/bstats/config.yml` in your server folder.
 
 ## To-Do
 - [x] Adding Code Structure and commiting the Project to GitHub
-- [ ] Get the Plugin running!
-- [ ] Save Loot-Sets
+- [x] Get the Plugin running!
+- [x] Save Loot-Sets
 - [ ] Fill Chests with Loot-Sets
 - [ ] Make a configurable Randomizer
 - [ ] Maybe add a GUI
