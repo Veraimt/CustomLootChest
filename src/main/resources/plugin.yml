@@ -1,5 +1,10 @@
-  name: CustomLootChest
-  main: de.veraimt.customlootchest
-  version: ${project.version}
-  authors: [Veraimt]
-  api-version: 1.8
+name: CustomLootChest
+version: 1.0-SNAPSHOT
+main: de.veraimt.customlootchest.CustomLootChest
+authors: [Veraimt]
+api-version: 1.8
+
+commands:
+  lootchest:
+    description: Manage Lootchests
+    usage: /<command> [create/load/delete] name

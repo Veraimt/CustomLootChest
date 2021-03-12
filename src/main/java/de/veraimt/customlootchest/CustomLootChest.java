@@ -1,5 +1,6 @@
 package de.veraimt.customlootchest;
 
+import de.veraimt.customlootchest.commands.LootChestCommand;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -13,6 +14,8 @@ public class CustomLootChest extends JavaPlugin {
 
         //bStats
         Metrics metrics = new Metrics(this, 10538);
+
+        getCommand("lootchest").setExecutor(new LootChestCommand());
     }
 
     @Override
