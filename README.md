@@ -74,7 +74,7 @@ The generation of the LootChest is finished when the spare LootPoints of the che
 the smallest number of LootPoints of an item or zero.
 
 #####Example
-![image1](CustomLootChest LootPoint.png)
+![image1](CustomLootChest-LootPoint.png)
 
 ## To-Do
 - [x] Adding Code Structure and committing the Project to GitHub
