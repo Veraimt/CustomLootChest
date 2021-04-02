@@ -25,24 +25,28 @@ public class LootChestCommand implements CommandExecutor {
      * @param label   Alias of the command which was used
      * @param args    Passed command arguments
      * @return true if a valid command, otherwise false
+     * determines if the usage specified in the plugin.yml is sent to the player
      */
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        //Termination conditions
+        //Termination condition: Player only
         if (!(sender instanceof Player)) {
             CustomLootChest.getInstance().getLogger().log(Level.INFO, "This command is player only");
             return true;
         }
 
+        //Variables
         Player player = (Player) sender;
         Block targetBlock = player.getTargetBlock((Set<Material>) null, 5);
 
+        //Termination condition: targeted Block not a Chest
         if (!(targetBlock.getState() instanceof Chest)) {
             player.sendMessage("§cPlease look at a chest while performing this command!");
             return true;
         }
         Chest chest = (Chest) targetBlock.getState();
 
+        //Termination condition: too few args
         if (args.length != 2)
             return false;
         LootChest lootChest;
@@ -60,16 +64,15 @@ public class LootChestCommand implements CommandExecutor {
                 }
 
                 //Saving the LootChest
+                //Player Feedback
                 if (LootChestIO.saveChest(lootChest))
                     player.sendMessage("The LootChest: '§5" + lootChest.getName() + "§r' was §2successfully§r saved!");
                 else
                     player.sendMessage("Couldn't save the Chest!");
 
-
                 return true;
 
             case "load":
-
                 //Load LootChest with given name (args[1])
                 lootChest = LootChestIO.loadChest(args[1]);
                 //if null the LootChest doesn't exist, cancelling execution
@@ -81,6 +84,7 @@ public class LootChestCommand implements CommandExecutor {
                 //Generate the Loot for the LootChest and fill the chest that the player is looking at
                 chest.getBlockInventory().setContents(lootChest.generate());
 
+                //Player Feedback
                 player.sendMessage("The LootChest: '§5" + lootChest.getName() + "§r' was loaded into the chest you looked at!");
 
                 return true;
