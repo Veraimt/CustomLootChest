@@ -55,14 +55,15 @@ A saved LootChest may look like this (obviously) without the comments on the rig
 }
 ```
 `#DEFAULT` this variable is only used for the LootChestType `DEFAULT`
+
 `#LOOT_POINT` this variable is only used for the LootChestType `LOOT_POINT`
 
-###Generation Methods
-####Default
+### Generation Methods
+#### Default
 The `DEFAULT` generation iterates once through the List of LootItems.
 The item will appear in the generated chest with the specified amount and under the specified percentage.
 
-####Loot Point
+#### Loot Point
 The `LOOT_POINT` generation iterates through the List of LootItems as long as there are spare LootPoints.
 The chance for the item to appear in an iteration is `1/LootPoints` percent in decimal (0.1 = 10%).
 
@@ -73,7 +74,7 @@ An item will be unable to generate if the amount of spare LootPoints is less tha
 The generation of the LootChest is finished when the spare LootPoints of the chest are less than
 the smallest number of LootPoints of an item or zero.
 
-#####Example
+##### Example
 ![image1](CustomLootChest LootPoint.png)
 
 ## To-Do
